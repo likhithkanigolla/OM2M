@@ -42,6 +42,36 @@ Once OM2M is running, you can:
 - Use REST APIs for managing resources
 - Connect IoT devices following oneM2M specifications
 
+## Posting Data to OM2M via MQTT
+
+To post data to OM2M using MQTT, you can use the [MQTT-OM2M Data Posting](https://github.com/likhithkanigolla/MQTT-OM2M) scripts.
+
+### Steps
+
+1. Ensure OM2M is running (see installation instructions above).
+2. Clone the MQTT-OM2M helper repository:
+   ```
+   git clone https://github.com/likhithkanigolla/MQTT-OM2M.git
+   cd MQTT-OM2M
+   ```
+3. Install Python dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Start the MQTT broker:
+   ```
+   python mqtt_broker.py
+   ```
+5. Run the test client to post data:
+   ```
+   python mqtt_test_client.py
+   ```
+
+This will publish sample data to OM2M using MQTT, demonstrating how IoT devices can interact with OM2M via the MQTT protocol.
+
+For more details, see the [MQTT-OM2M Data Posting repository](https://github.com/likhithkanigolla/MQTT-OM2M).
+
+
 ## Disclaimer
 
 This repository is provided as-is for accessibility purposes. I do not claim ownership of OM2M, and all rights remain with the original authors and maintainers.
